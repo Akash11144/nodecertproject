@@ -41,6 +41,7 @@ const Homepage = () => {
         <Route path="/playerCard" component={PlayerCard}></Route>
         <Route path="/playerInfo" component={PlayerInfo}></Route>
         <div className="main">
+          {console.log('teamdata:=>',TeamData)}
           <div className="topbar">
             <h2 style={{ color: "rgb(192, 18, 18)", fontSize: "2rem" }}>IPL</h2>
             <div id="searchHolder">
