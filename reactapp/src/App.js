@@ -24,7 +24,11 @@ const Homepage = () => {
           if (res.data.length == 0) 
             axios
               .get("/playernameget/" + searchValue)
-              .then(res=> setsearchedPlayer(res.data));
+              .then(res=> {
+                          console.log("res=>",res)
+                          console.log("res data=>",res.data)
+                          setsearchedPlayer(res.data)
+                        });
          else setsearchedTeam(res.data);
         });
       document.getElementById("searchesultsCotainer").style.display = "block";
