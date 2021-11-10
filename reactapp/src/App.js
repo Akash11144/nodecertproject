@@ -36,43 +36,46 @@ const Homepage = () => {
   };
 
   return (
-    <HashRouter>
-      <Switch>
-        <Route path="/playerCard" component={PlayerCard}></Route>
-        <Route path="/playerInfo" component={PlayerInfo}></Route>
-        <div className="main">
-          {console.log('teamdata:=>',TeamData)}
-          <div className="topbar">
-            <h2 style={{ color: "rgb(192, 18, 18)", fontSize: "2rem" }}>IPL</h2>
-            <div id="searchHolder">
-              <input
-                type={Text}
-                id="search"
-                onChange={(e) => handleSearch()}
-                placeholder="Search team"
-              ></input>
-            </div>
-          </div>
-          <div id="searchesultsCotainer">
-            <button id="closeButton" onClick={() => handleClose()}>
-              X
-            </button>
-            {searchedTeam.length
-              ? searchedTeam.map((item) => <SeachedPlayerCard {...item}></SeachedPlayerCard>)
-              : ""}
-            {searchedPlayer.length
-              ? searchedPlayer.map((item) => (
-                  <SeachedPlayerCard {...item}></SeachedPlayerCard>
-                ))
-              : ""}
-          </div>
-          <div className="cardContainerTeam">
-            {TeamData.length && TeamData.map((item) => <Card {...item}></Card>)}
-          </div>
-        </div>
-      </Switch>
-      <Footer></Footer>
-    </HashRouter>
+    <div>
+      {console.log('teamdata=>',TeamData)}
+    </div>
+    // <HashRouter>
+    //   <Switch>
+    //     <Route path="/playerCard" component={PlayerCard}></Route>
+    //     <Route path="/playerInfo" component={PlayerInfo}></Route>
+    //     <div className="main">
+    //       {console.log('teamdata:=>',TeamData)}
+    //       <div className="topbar">
+    //         <h2 style={{ color: "rgb(192, 18, 18)", fontSize: "2rem" }}>IPL</h2>
+    //         <div id="searchHolder">
+    //           <input
+    //             type={Text}
+    //             id="search"
+    //             onChange={(e) => handleSearch()}
+    //             placeholder="Search team"
+    //           ></input>
+    //         </div>
+    //       </div>
+    //       <div id="searchesultsCotainer">
+    //         <button id="closeButton" onClick={() => handleClose()}>
+    //           X
+    //         </button>
+    //         {searchedTeam.length
+    //           ? searchedTeam.map((item) => <SeachedPlayerCard {...item}></SeachedPlayerCard>)
+    //           : ""}
+    //         {searchedPlayer.length
+    //           ? searchedPlayer.map((item) => (
+    //               <SeachedPlayerCard {...item}></SeachedPlayerCard>
+    //             ))
+    //           : ""}
+    //       </div>
+    //       <div className="cardContainerTeam">
+    //         {TeamData.length && TeamData.map((item) => <Card {...item}></Card>)}
+    //       </div>
+    //     </div>
+    //   </Switch>
+    //   <Footer></Footer>
+    // </HashRouter>
   );
 };
 
