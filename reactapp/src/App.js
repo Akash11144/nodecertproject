@@ -12,18 +12,18 @@ const Homepage = () => {
   const [searchedPlayer, setsearchedPlayer] = useState([]);
   const [searchedTeam, setsearchedTeam] = useState([]);
   
-  useEffect(() => axios.get("http://localhost:9999/teamget").then(res =>setTeamData(res.data)).catch((err)=>console.log('error',err)), []);
+  useEffect(() => axios.get("/teamget").then(res =>setTeamData(res.data)).catch((err)=>console.log('error',err)), []);
 
   const handleSearch = async () => {
     var searchValue = document.getElementById("search").value;
     if (searchValue == "") {
     } else {
       await axios
-        .get("http://localhost:9999/playerget/" + searchValue)
+        .get("/playerget/" + searchValue)
         .then(res => {
           if (res.data.length == 0) 
             axios
-              .get("http://localhost:9999/playernameget/" + searchValue)
+              .get("/playernameget/" + searchValue)
               .then(res=> setsearchedPlayer(res.data));
          else setsearchedTeam(res.data);
         });
