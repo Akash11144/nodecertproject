@@ -12,7 +12,7 @@ const Homepage = () => {
   const [searchedPlayer, setsearchedPlayer] = useState([]);
   const [searchedTeam, setsearchedTeam] = useState([]);
   
-  useEffect(() => axios.get("http://localhost:9999/teamget").then(res =>setTeamData(res.data)), []);
+  useEffect(() => axios.get("http://localhost:9999/teamget").then(res =>setTeamData(res.data)).catch((err)=>console.log('error',err)), []);
 
   const handleSearch = async () => {
     var searchValue = document.getElementById("search").value;
