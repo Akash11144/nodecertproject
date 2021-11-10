@@ -996,7 +996,7 @@ const options = {
   useNewUrlParser: true,
 };
 
-m.connect(dbURI, options).then(() => console.log("database connected"));
+m.connect(dbURI, options).then(() => console.log("database connected")).catch(err=>console.log(err));
 
 const TeamSchema = new m.Schema({}, { strict: false });
 let team = m.model("team", TeamSchema);

@@ -8,7 +8,9 @@
     "nodejscert": "cd reactapp && npm start",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"npm run nodejscert\" \"npm run server\"",
-    "nodejscert:build": "cd reactapp && npm run build"
+    "nodejscert:build": "cd reactapp && npm run build",
+    "install-nodejscert": "cd reactapp && npm install",
+    "heroku-postbuild":"npm run install-nodejscert && npm run build"
   },
   "repository": {
     "type": "git",
