@@ -990,7 +990,7 @@ if (
   });
 }
 
-const dbURI = `mongodb+srv://akash:akash@first.k0veb.mongodb.net/nodejs-final?retryWrites=true&w=majority`;
+const dbURI =process.env.MONGODB_URI || `mongodb+srv://akash:akash@first.k0veb.mongodb.net/nodejs-final?retryWrites=true&w=majority`;
 const options = {
   useUnifiedTopology: true,
   useNewUrlParser: true,
