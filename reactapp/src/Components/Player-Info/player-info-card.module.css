@@ -1,0 +1,16 @@
+.playHold {
+    width: 70%;
+    height: 60vh;
+    padding: 10px;
+    background-color: rgb(119, 12, 12);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #920c0cd7;
+    box-shadow: 20px 20px 60px #500606, -20px -20px 60px #500606;
+  }
+  .ImgHold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

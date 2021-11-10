@@ -1,0 +1,60 @@
+.cardContainerTeam {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 95%;
+  margin: 5% auto 0 auto;
+}
+.main {
+  background: #ca1c1c;
+}
+.topbar {
+  box-shadow: 0px 0px 30px black;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  background-color: rgb(255, 255, 255);
+}
+#searchHolder {
+  width: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#search {
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 0 2px black;
+}
+#searchesultsCotainer {
+  box-shadow: 0px 0px 5px black;
+  background-color: rgb(255, 255, 255);
+  width: 15%;
+  max-height: 300px;
+  overflow-y: auto;
+  position: absolute;
+  right: 10%;
+  top: 9%;
+  display: none;
+  z-index: 100;
+}
+#searchesults {
+  background-color: rgb(255, 255, 255);
+  padding: 5px;
+  box-shadow: 0 0 5px black;
+  letter-spacing: 1px;
+}
+#closeButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: rgb(192, 18, 18);
+  color: white;
+  border: 0;
+}

@@ -1,0 +1,20 @@
+.playerDataHold {
+  background-color: #7c0e0e;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playerDataHoldStyle {
+  background: linear-gradient(145deg, #6e0909a4, #440404);
+  box-shadow: 20px 20px 60px #6e0909a4, -20px -20px 60px #440404;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 2%;
+  margin-bottom: 15vh;
+  margin-top: 2%;
+}

@@ -1,0 +1,35 @@
+.TeamDetails {
+  box-shadow: 0 0 50px goldenrod;
+  width: 90%;
+  margin: 5% auto;
+  border-top-left-radius: 300px;
+  border-bottom-right-radius: 300px;
+  border-bottom-left-radius: 200px;
+  border-top-right-radius: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4% 2%;
+  border-radius: 50px;
+  background: #b30707;
+  box-shadow: 20px 20px 60px #770808, -20px -20px 60px #920f0ff6;
+}
+.TeamImg {
+  width: 30%;
+  height: 300px;
+}
+.teamholder > h2 {
+  font-size: 2rem;
+}
+.team1 {
+  color: goldenrod;
+  text-shadow: 1px 1px 2px black;
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+.team {
+  color: white;
+  text-shadow: 1px 1px 2px red;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}

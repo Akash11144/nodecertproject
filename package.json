@@ -1,0 +1,32 @@
+{
+  "name": "nodecertproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodejscert": "cd reactapp && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run nodejscert\" \"npm run server\"",
+    "nodejscert:build": "cd reactapp && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akash11144/nodecertproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akash11144/nodecertproject/issues"
+  },
+  "homepage": "https://github.com/Akash11144/nodecertproject#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.15"
+  }
+}
