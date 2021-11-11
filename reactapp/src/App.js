@@ -15,9 +15,9 @@ const Homepage = () => {
   useEffect(
     () =>
       axios
-        .get("/teamget")
+        .get("https://guarded-hollows-53799.herokuapp.com/teamget")
         .then((res) => {
-          console.log("res",res)
+          console.log("res axios",res)
           console.log("res data",res.data)
           setTeamData(res.data)
         })
@@ -29,9 +29,9 @@ const Homepage = () => {
     var searchValue = document.getElementById("search").value;
     if (searchValue == "") {
     } else {
-      await axios.get("/playerget/" + searchValue).then((res) => {
+      await axios.get("https://guarded-hollows-53799.herokuapp.com/playerget/" + searchValue).then((res) => {
         if (res.data.length == 0)
-          axios.get("/playernameget/" + searchValue).then((res) => {
+          axios.get("https://guarded-hollows-53799.herokuapp.com/playernameget/" + searchValue).then((res) => {
             setsearchedPlayer(res.data);
           });
         else setsearchedTeam(res.data);

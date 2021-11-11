@@ -12,12 +12,12 @@ const PlayerCard = () => {
   const [PlayerData, setPlayerData] = useState([]);
 
   useEffect(() => {
-    let t = "http://localhost:9999/teamget/" + a;
+    let t = "https://guarded-hollows-53799.herokuapp.com/teamget/" + a;
     axios
       .get(t)
       .then(res => setTeamData(res.data))
       .catch(err => console.log(err));
-    let te = "http://localhost:9999/playerget/" + a;
+    let te = "https://guarded-hollows-53799.herokuapp.com/playerget/" + a;
     axios
       .get(te)
       .then(res => setPlayerData(res.data))
@@ -50,9 +50,9 @@ const PlayerCard = () => {
         logo: TeamData[0].icon,
       };
       await axios
-        .post("http://localhost:9999/addPlayer", obj)
+        .post("https://guarded-hollows-53799.herokuapp.com/addPlayer", obj)
         .then(res => {
-          let te = "http://localhost:9999/playerget/" + a;
+          let te = "https://guarded-hollows-53799.herokuapp.com/playerget/" + a;
           axios
             .get(te)
             .then(res => setPlayerData(res.data))

@@ -13,7 +13,7 @@ const PlayerInfo = () => {
   useEffect(
     () =>
       axios
-        .get("http://localhost:9999/playernameget/" + a)
+        .get("https://guarded-hollows-53799.herokuapp.com/playernameget/" + a)
         .then((res) => setplayerdata(res.data)),
     []
   );
